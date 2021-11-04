@@ -8,7 +8,7 @@ function Cities() {
 
   const handleCityChange = (e) => {
     for (let i = 0; i < cities_list.length; i++) {
-      if (e.target.value !== cities_list[i].il_adi) {
+      if (e.target.value === cities_list[i].il_adi) {
         setSelectedCity(cities_list[i]);
       }
     }
