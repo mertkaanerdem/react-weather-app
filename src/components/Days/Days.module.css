@@ -1,26 +1,32 @@
 .dailyContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .bg {
   position: absolute;
-  left: -90px;
-  top: -90px;
-  z-index: -1;
-  width: 200px;
-  opacity: 0.4;
+  left: -150px;
+  top: -150px;
+  z-index: 1;
+  width: 400px;
+  opacity: 0.1;
 }
 
 .days {
   position: relative;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 0 2px 2px #ddd;
+  box-shadow: 0 0 2px 2px #ccc;
   margin: 10px;
   overflow: hidden;
+  flex: 1;
 }
 .days:first-child {
   box-shadow: 0 0 2px 2px #aaa;
-  border: 1px solid red;
+  border: 1px solid #eee;
+}
+
+.desc {
+  font-weight: bold;
+  font-size: 12px;
 }

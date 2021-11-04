@@ -10,7 +10,7 @@ export const WeatherProvider = ({ children }) => {
   useEffect(() => {
     async function getWeather() {
       const apiCall = await fetch(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${selectedCity.lat}&lon=${selectedCity.lon}&exclude=hourly,minutely,alerts&lang=tr&units=metric&appid=f2e63197dde4e944cda606ebd3c3fb6f`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${selectedCity.lat}&lon=${selectedCity.lon}&exclude=hourly,minutely,alerts&units=metric&appid=f2e63197dde4e944cda606ebd3c3fb6f`
       );
 
       const res = await apiCall.json();
@@ -26,7 +26,8 @@ export const WeatherProvider = ({ children }) => {
     cities_list,
     selectedCity,
     setSelectedCity,
-    weatherData, setWeatherData
+    weatherData,
+    setWeatherData,
   };
 
   return (

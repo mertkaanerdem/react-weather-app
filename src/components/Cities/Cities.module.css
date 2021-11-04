@@ -1,0 +1,19 @@
+.container {
+  width: 50vw;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.cities {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  text-align: center;
+}

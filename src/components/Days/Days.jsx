@@ -6,13 +6,13 @@ import WeatherContext from "../../context/WeatherContext";
 function Days() {
   const { weatherData } = useContext(WeatherContext);
   const days = [
-    "Pazar",
-    "Pazartesi",
-    "Salı",
-    "Çarşamba",
-    "Perşembe",
-    "Cuma",
-    "Cumartesi",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
   ];
   return (
     <div className={styles.dailyContainer}>
@@ -23,7 +23,7 @@ function Days() {
             src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
             alt={day.weather[0].icon}
           />
-          <h4>{Math.round(day.temp.day)}</h4>
+          <h4>{Math.round(day.temp.day)}&#176;</h4>
           <p>{days[new Date(day.dt * 1000).getDay()]}</p>
 
           <p>
@@ -33,7 +33,9 @@ function Days() {
             src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
             alt={day.weather[0].icon}
           />
-          <p>{day.weather[0].description}</p>
+          <p className={styles.desc}>
+            {day.weather[0].description.toUpperCase()}
+          </p>
         </div>
       ))}
     </div>

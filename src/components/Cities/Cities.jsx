@@ -1,5 +1,5 @@
+import styles from "./Cities.module.css";
 import { useContext } from "react";
-
 import WeatherContext from "../../context/WeatherContext";
 
 function Cities() {
@@ -14,13 +14,20 @@ function Cities() {
     }
   };
   return (
-    <select value={selectedCity.il_adi} onChange={handleCityChange}>
+      <div className={styles.container}>
+
+    <select
+      className={styles.cities}
+      value={selectedCity.il_adi}
+      onChange={handleCityChange}
+      >
       {cities_list.map((city, i) => (
-        <option key={i} value={city.il_adi}>
+          <option key={i} value={city.il_adi}>
           {city.il_adi}
         </option>
       ))}
     </select>
+      </div>
   );
 }
 
